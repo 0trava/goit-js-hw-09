@@ -21,6 +21,7 @@ const days = document.querySelector('span[data-days]');
 btnStart.disabled = true; // початковий стан кнопки: вимкнена
 btnStart.style.background = 'white';
 let countdown ; // Змінна для збереження часу
+const TIMER_DELAY = 1000;
 
 //  Підключаємо календаря в інпут
 const options = {
@@ -79,7 +80,7 @@ function startCoint() {
 
 
     // таймер відліку часу
-    timeClock = setInterval(() => {
+    timerId = setInterval(() => {
 
         // перевірка таймера > секунди
         if (countdown >= 999) {
@@ -97,7 +98,7 @@ function startCoint() {
 
         } else {
             Notiflix.Notify.success('Time is up...',{width:'350px', borderRadius: '10px', position: 'center-center',clickToClose: true, useIcon: false,}); // повідомлення про завершення підрахунку
-            clearInterval(timeClock); // вихід із таймеру
+            clearInterval(timerId); // вихід із таймеру
             inputWindow.disabled = false; // активація вікна input
 
             days.style.color = 'black';
@@ -105,7 +106,7 @@ function startCoint() {
             minutes.style.color = 'black';
             seconds.style.color = 'black';
         };
-    }, 1000); 
+    }, TIMER_DELAY); 
 
 
 };
