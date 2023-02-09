@@ -16,17 +16,17 @@ function getRandomHexColor() {
   function changeColor() {
     btnStart.disabled = true; 
     btnStop.disabled = false; 
-    buttonTEST = true;
+    
 
   // таймер для зміни кольору
   colorInterval = setInterval(() => {
     if (buttonTEST){
           // покраска фону у випаковий колір
           document.body.style.background = getRandomHexColor();
-    };
+    }else{clearInterval(colorInterval);};
 
   }, 1000); // зміна кольору 1 раз на секунду
-
+      buttonTEST = true;
   };
 
   btnStart.addEventListener("click", changeColor);
