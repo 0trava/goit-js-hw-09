@@ -12,7 +12,6 @@ import Notiflix from 'notiflix'; // бібліотека повідомлень
 //  Пошук елементів на сторінці
 const btnStart = document.querySelector('button[data-start]');
 const inputWindow = document.querySelector("#datetime-picker");
-// const timerHtml = document.querySelector('.timer');
 const seconds = document.querySelector('span[data-seconds]');
 const minutes = document.querySelector('span[data-minutes]');
 const hours = document.querySelector('span[data-hours]');
