@@ -32,7 +32,7 @@ function getRandomHexColor() {
     btnStart.disabled = false; 
     btnStop.disabled = true; 
     clearInterval(colorInterval); // вихід із таймеру
-    // clearTimeout(colorInterval);
+    clearTimeout(colorInterval);
   };
 
   btnStop.addEventListener("click", stopChangeColor);
