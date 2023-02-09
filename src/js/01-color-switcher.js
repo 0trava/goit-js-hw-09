@@ -5,40 +5,35 @@ function getRandomHexColor() {
   }
 
 //  Пошук елементів на сторінці
-  const body = document.querySelector("body");
+
   const btnStart = document.querySelector('button[data-start]');
   const btnStop = document.querySelector('button[data-stop]');
-  let buttonTEST = true;
+
 
   btnStop.disabled = true; // початковий стан кнопки: вимкнена
+  let colorInterval = null; // таймер для зміни кольору
 
-  // Функція зміни кольору
-  function changeColor() {
-    btnStart.disabled = true; 
-    btnStop.disabled = false; 
-    
+// додаємо слухача подій для кнопки СТАРТ
+btnStart.addEventListener('click', () => {
+  btnStart.disabled = true; // деактивація кнопки СТАРТ
+  btnStop.disabled = false; // активація кнопки СТОП
 
   // таймер для зміни кольору
   colorInterval = setInterval(() => {
-    if (buttonTEST){
-          // покраска фону у випаковий колір
-          document.body.style.background = getRandomHexColor();
-    }else{clearInterval(colorInterval);};
 
+    // покраска фону у випаковий колір
+    document.body.style.background = getRandomHexColor();
   }, 1000); // зміна кольору 1 раз на секунду
-      buttonTEST = true;
-  };
+});
 
-  btnStart.addEventListener("click", changeColor);
+// додаємо слухача подій для кнопки СТОП
+btnStop.addEventListener('click', () => {
 
-  // Функція зупинки
-  function stopChangeColor () {
-    btnStart.disabled = false; 
-    btnStop.disabled = true; 
-    clearInterval(colorInterval); // вихід із таймеру
-    clearTimeout(colorInterval);
-    buttonTEST = false;
-  };
+  // очистка таймеру для зміни кольору
+  clearInterval(colorInterval);
 
-  btnStop.addEventListener("click", stopChangeColor);
+  btnStart.disabled = false; // активація кнопки СТАРТ
+  btnStop.disabled = true; // деактивація кнопки СТОП
+});
+
 
