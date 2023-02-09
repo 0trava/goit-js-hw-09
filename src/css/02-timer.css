@@ -1,0 +1,74 @@
+/* Додай мінімальне оформлення елементів інтерфейсу. */
+.timer{
+ display: flex;
+
+}
+
+.timer > .field{
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+ .label{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform:uppercase;
+
+    margin-top: 7px;
+    
+    color: #9DA1B4;
+}
+
+input {
+    text-align:center;
+}
+
+.value{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 28px;
+
+    margin-top: 20px;
+
+    color: black;
+}
+
+.timer-input{
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+    
+    border-color: #9DA1B4;
+}
+
+.timer-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    font-size: 14px;
+    padding-left: 10px;
+    justify-content: center;
+    text-align: center;
+    background-color:black;
+    color: #fff;
+    border:black;
+    box-shadow: 0px 0px 2px 2px black;
+    cursor: pointer;
+
+}
+
+
+
