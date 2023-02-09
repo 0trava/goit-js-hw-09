@@ -1,0 +1,13 @@
+.form{
+    display: flex;
+}
+
+label{
+    display: flex;
+    margin-left: 20px;
+}
+
+label > input{
+    margin-right: 10px;
+    margin-left: 10px;
+}
