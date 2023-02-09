@@ -97,7 +97,7 @@ function startCoint() {
 
         } else {
             Notiflix.Notify.success('Time is up...',{width:'350px', borderRadius: '10px', position: 'center-center',clickToClose: true, useIcon: false,}); // повідомлення про завершення підрахунку
-            clearTimeout(timeClock ); // вихід із таймеру
+            clearInterval(timeClock); // вихід із таймеру
             inputWindow.disabled = false; // активація вікна input
 
             days.style.color = 'black';

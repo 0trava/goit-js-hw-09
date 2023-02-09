@@ -1,6 +1,13 @@
 /* Додай мінімальне оформлення елементів інтерфейсу. */
 .timer{
  display: flex;
+ width: 320px;
+ margin-top: 20px;
+ margin-left: 100px;
+ padding-left: 15px;
+ 
+ border: 2px solid #9DA1B4;
+ border-radius: 5px;
 
 }
 
@@ -29,6 +36,7 @@
 
 input {
     text-align:center;
+    
 }
 
 .value{
@@ -45,7 +53,7 @@ input {
 
 .timer-input{
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 100px;
     border-radius: 10px;
     height: 30px;
     width: 200px;
@@ -55,18 +63,20 @@ input {
 
 .timer-button {
     width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-left: 15px;
 
     font-size: 14px;
-    padding-left: 10px;
+
     justify-content: center;
     text-align: center;
     background-color:black;
     color: #fff;
     border:black;
-    box-shadow: 0px 0px 2px 2px black;
-    cursor: pointer;
+    /* box-shadow: 0px 0px 2px 2px black; */
+    /* cursor: pointer; */
 
 }
 
