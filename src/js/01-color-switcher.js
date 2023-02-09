@@ -8,6 +8,7 @@ function getRandomHexColor() {
   const body = document.querySelector("body");
   const btnStart = document.querySelector('button[data-start]');
   const btnStop = document.querySelector('button[data-stop]');
+  let buttonTEST = true;
 
   btnStop.disabled = true; // початковий стан кнопки: вимкнена
 
@@ -15,12 +16,15 @@ function getRandomHexColor() {
   function changeColor() {
     btnStart.disabled = true; 
     btnStop.disabled = false; 
+    buttonTEST = true;
 
   // таймер для зміни кольору
   colorInterval = setInterval(() => {
+    if (buttonTEST){
+          // покраска фону у випаковий колір
+          document.body.style.background = getRandomHexColor();
+    };
 
-    // покраска фону у випаковий колір
-    document.body.style.background = getRandomHexColor();
   }, 1000); // зміна кольору 1 раз на секунду
 
   };
@@ -33,6 +37,7 @@ function getRandomHexColor() {
     btnStop.disabled = true; 
     clearInterval(colorInterval); // вихід із таймеру
     clearTimeout(colorInterval);
+    buttonTEST = false;
   };
 
   btnStop.addEventListener("click", stopChangeColor);
